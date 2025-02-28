@@ -27,11 +27,11 @@ body {
 }
 
 .start-button {
-    font-size: 1.5rem;
+    font-size: 0.5rem;
     padding: 15px 25px;
     margin-top: 20px;
     cursor: pointer;
-    background-color: #28a745;
+    background-color: #f0e878;
     color: white;
     border: none;
     border-radius: 50%;
