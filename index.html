@@ -10,22 +10,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <title>Timer Online - Cronômetro e Temporizador Grátis</title>
-<meta name="description" content="Use nosso timer online gratuito! Cronômetro simples, fácil de usar e sem anúncios. Inicie, pause e resete seu temporizador agora mesmo.">
-<meta name="keywords" content="timer online, cronômetro, temporizador, stopwatch, contagem regressiva">
     <header>
         <h1>Cronômetro e Timer Online</h1>
-
-<main>
-        <section id="descricao">
-            <h2>Sobre o Cronômetro e Timer Online</h2>
-            <p>Nosso cronômetro e timer online permitem medir o tempo de forma precisa e confiável. Ideal para treinos esportivos, sessões de estudo, cozinha e diversas outras atividades.</p>
-        </section>
-
+        <nav>
+            <ul>
+                <li><a href="#relogio">Relógio</a></li>
+                <li><a href="#descricao">Sobre</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#publicidade">Publicidade</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
         <section id="relogio">
-           <h2>Relógio Online</h2>
-           <div id="timer-container">
-           </div>
+            <h2>Relógio Online</h2>
+            <div id="timer-container"></div>
+            <script src="timer.js" defer></script>
         </section>
 
         <section id="publicidade">
@@ -36,14 +37,19 @@
             </div>
         </section>
 
+        <section id="descricao">
+            <h2>Sobre o Cronômetro e Timer Online</h2>
+            <p>Nosso cronômetro e timer online permitem medir o tempo de forma precisa e confiável. Ideal para treinos esportivos, sessões de estudo, cozinha e diversas outras atividades.</p>
+        </section>
+
         <section id="blog">
             <h2>Últimos Artigos</h2>
             <article>
-                <h3><p>Dicas para usar um cronômetro para produtividade</p></h3>
+                <h3><a href="#">Dicas para usar um cronômetro para produtividade</a></h3>
                 <p>Saiba como melhorar sua eficiência utilizando nosso cronômetro digital.</p>
             </article>
             <article>
-                <h3><p>Por que um Timer pode melhorar sua rotina diária?</p></h3>
+                <h3><a href="#">Por que um Timer pode melhorar sua rotina diária?</a></h3>
                 <p>Descubra os benefícios de utilizar um timer no seu dia a dia.</p>
             </article>
         </section>
@@ -52,7 +58,5 @@
     <footer>
         <p>&copy; 2025 Cronômetro Online. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="timer.js"></script>
 </body>
 </html>
