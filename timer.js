@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function setMode(newMode) {
         mode = newMode;
         reset();
+        document.getElementById("stopwatchBtn").classList.toggle("active", mode === "stopwatch");
+        document.getElementById("timerBtn").classList.toggle("active", mode === "timer");
+        document.getElementById("presetContainer").style.display = mode === "timer" ? "block" : "none";
     }
 
     updateDisplay();
@@ -83,14 +86,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const stopwatchBtn = document.createElement("button");
     stopwatchBtn.innerText = "Cronômetro";
+    stopwatchBtn.id = "stopwatchBtn";
+    stopwatchBtn.className = "mode-button active";
     stopwatchBtn.onclick = () => setMode("stopwatch");
 
     const timerBtn = document.createElement("button");
     timerBtn.innerText = "Timer";
+    timerBtn.id = "timerBtn";
+    timerBtn.className = "mode-button";
     timerBtn.onclick = () => setMode("timer");
 
     const presetContainer = document.createElement("div");
     presetContainer.className = "preset-container";
+    presetContainer.id = "presetContainer";
+    presetContainer.style.display = "none";
     [300, 600, 900, 1800, 2700, 3600].forEach((preset) => {
         const btn = document.createElement("button");
         btn.innerText = `${preset / 60} min`;
