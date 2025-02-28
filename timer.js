@@ -56,6 +56,14 @@ document.addEventListener("DOMContentLoaded", function() {
         updateDisplay();
     }
 
+    function startTimerWithPreset(preset) {
+        mode = "timer";
+        time = preset * 1000;
+        isRunning = true;
+        updateDisplay();
+        startStop();
+    }
+
     function setMode(newMode) {
         mode = newMode;
         reset();
@@ -81,8 +89,19 @@ document.addEventListener("DOMContentLoaded", function() {
     timerBtn.innerText = "Timer";
     timerBtn.onclick = () => setMode("timer");
 
+    const presetContainer = document.createElement("div");
+    presetContainer.className = "preset-container";
+    [300, 600, 900, 1800, 2700, 3600].forEach((preset) => {
+        const btn = document.createElement("button");
+        btn.innerText = `${preset / 60} min`;
+        btn.className = "preset-button";
+        btn.onclick = () => startTimerWithPreset(preset);
+        presetContainer.appendChild(btn);
+    });
+
     document.body.appendChild(stopwatchBtn);
     document.body.appendChild(timerBtn);
+    document.body.appendChild(presetContainer);
     document.body.appendChild(timerContainer);
     document.body.appendChild(startBtn);
     document.body.appendChild(resetBtn);
