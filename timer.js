@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 10);
         }
         isRunning = !isRunning;
+        startBtn.innerText = isRunning ? "Pausar" : "Iniciar";
     }
 
     function reset() {
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         time = mode === "timer" ? presetTime * 1000 : 0;
         isRunning = false;
         updateDisplay();
+        startBtn.innerText = "Iniciar";
     }
 
     function startTimerWithPreset(preset) {
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateDisplay();
 
     const startBtn = document.createElement("button");
-    startBtn.innerText = "Iniciar / Pausar";
+    startBtn.innerText = "Iniciar";
     startBtn.className = "start-button";
     startBtn.onclick = startStop;
 
