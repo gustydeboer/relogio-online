@@ -8,6 +8,9 @@
     <meta name="author" content="Seu Nome ou Empresa">
     <title>Cronômetro e Timer Online - Relógio Digital</title>
     <link rel="stylesheet" href="styles.css">
+     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +21,6 @@
         <section id="relogio">
             <h2>Relógio Online</h2>
             <div id="timer-container"></div>
-            <script src="timer.js" defer></script>
         </section>
         
         <section id="publicidade">
@@ -50,5 +52,8 @@
     <footer>
         <p>&copy; 2025 Cronômetro Online. Todos os direitos reservados.</p>
     </footer>
+
+     <!-- Carregar o React App -->
+    <script type="text/babel" src="timer.js"></script>
 </body>
 </html>
